@@ -1,3 +1,9 @@
+/* Project: Lab 2
+ *Class: UniqueWords.java
+ *Author: Daniel Veliz
+ *Date: 2/28/2021
+ * This program prints out the number of unique words in an array.
+ */
 import java.util.ArrayList;
 
 public class UniqueWords
@@ -12,11 +18,19 @@ public class UniqueWords
 	  int count = 0;
 	  
       for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
+      {		
+    	  for (int j = 0; j < list.size(); j++)
 		 {
-			
+    // This method counts the duplicate words.
+    		  if (i != j&& list.get(i).equals(list.get(j))) {
+    			  count++;
+    		  }
+    		  
+			if(list.get(i) == list.get(j));
 		 }
       }
+      count = list.size() - count;
+      
 	  return count;
    }
 
